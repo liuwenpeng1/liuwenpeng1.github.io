@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>为博客添加本地搜索</title>
+      <link href="/2020/02/10/hexo-search/"/>
+      <url>/2020/02/10/hexo-search/</url>
+      
+        <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>当文章写的越来越多，查找就会有些费劲，需要一个本地搜索的功能，今天就来添加博客的本地搜索</p><h4 id="安装插件hexo-generator-searchdb，"><a href="#安装插件hexo-generator-searchdb，" class="headerlink" title="安装插件hexo-generator-searchdb，"></a>安装插件hexo-generator-searchdb，</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><h4 id="编辑配置文件，添加以下内容："><a href="#编辑配置文件，添加以下内容：" class="headerlink" title="编辑配置文件，添加以下内容："></a>编辑配置文件，添加以下内容：</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Search</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure><h4 id="编辑主题配置文件，启动搜索"><a href="#编辑主题配置文件，启动搜索" class="headerlink" title="编辑主题配置文件，启动搜索"></a>编辑主题配置文件，启动搜索</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><h4 id="重启刷新一下"><a href="#重启刷新一下" class="headerlink" title="重启刷新一下"></a>重启刷新一下</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure><p>新页面的搜索功能就添加完成了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为博客添加标签</title>
+      <link href="/2020/02/10/hexo-tags/"/>
+      <url>/2020/02/10/hexo-tags/</url>
+      
+        <content type="html"><![CDATA[<p>创建tag页面和分类页面是类似的，如果没有添加直接点会出现cannot find的错误，下面我们来创建标签页</p><h4 id="创建tags页面"><a href="#创建tags页面" class="headerlink" title="创建tags页面"></a>创建tags页面</h4><ol><li><p>打开命令行输入一下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure></li><li><p>指令输完之后会在source下生成一个tags目录，该目录下会有一个index.md文件，编辑该文件,type: tags</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-02-07 19:01:54</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ol><h4 id="为自己的文章添加各自的标签"><a href="#为自己的文章添加各自的标签" class="headerlink" title="为自己的文章添加各自的标签"></a>为自己的文章添加各自的标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">tags: xxx</span><br><span class="line">---</span><br></pre></td></tr></table></figure><h4 id="重启刷新一下"><a href="#重启刷新一下" class="headerlink" title="重启刷新一下"></a>重启刷新一下</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure><p>然后你就可以在标签页看到自己刚刚的标签了。</p><p>如果首页的menu中没有tags选项，可以在nexT的_config.yml文件中找到menu，并添加。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line">  <span class="comment">#about: /about/ || user</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  search:</span> <span class="string">/search/</span> <span class="string">||</span> <span class="string">search</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo,nexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>idea的安装与破解</title>
+      <link href="/2020/02/08/java-idea/"/>
+      <url>/2020/02/08/java-idea/</url>
+      
+        <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>idea是开发java很好用的IDE，过去使用时候都是百度随便一个破解码就能完成破解，但最近老是因为破解过期而失败，令人心情烦躁。于是去网上找了一下破解办法彻底解决一下。</p><h4 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h4><p>我们选择从官网下载，下载地址为: <a href="https://www.jetbrains.com/idea/download/" target="_blank" rel="noopener">https://www.jetbrains.com/idea/download/</a> 目前最新版本是2019.3，我这里用的是2019.2。<br><img src="/images/java-idea/p1.png" alt="p1"><br>选择正确的平台和版本进行下载。<br>如果想找历史版本可以点击other version找到历史版本<br><img src="/images/java-idea/p2.png" alt="p2"><br>等待下载之后，点击进行安装<br><img src="/images/java-idea/p3.png" alt="p3"><br>安装之后再启动界面，先选择使用30天选项</p><h4 id="下载破解补丁"><a href="#下载破解补丁" class="headerlink" title="下载破解补丁"></a>下载破解补丁</h4><p>破解补丁是一个jetbrains-agent.jar的一个补丁大约1M左右。下载之后将破解文件放到某个路径下，这里建议是idea的安装目录下，注意不可在中文路径中，否则idea打不开</p><blockquote><p>mac: /User/xxx/jetbrains-agent.jar<br>win: C:\Program Files\JetBrains\bin</p></blockquote><h4 id="配置补丁"><a href="#配置补丁" class="headerlink" title="配置补丁"></a>配置补丁</h4><p>打开idea在helper-edit Custom VM Options菜单。如果需要创建文件，点yes<br>在文件的末尾加上刚刚存放的补丁路径：（注意，请一定在idea中修改此配置，直接从目录中修改文件将会破解失败）<br><img src="/images/java-idea/p4.png" alt="p3"></p><p>此时，保存配置，重启idea！</p><p>在idea菜单helper-register中选择License server激活<br><img src="/images/java-idea/p5.png" alt="p3"><br>此时idea应该已经激活成功，在关于idea中可以查看到，如果还是试用版，可以重启一下，应该就可以成功</p><h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>以上方法在2019.2版本上面验证是通过的，此外也可用与破解JetBrains公司的其他IDE，比如WebStorm。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> idea </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为博客添加分类</title>
+      <link href="/2020/02/07/hexo-categories/"/>
+      <url>/2020/02/07/hexo-categories/</url>
+      
+        <content type="html"><![CDATA[<p>刚刚创建完的博客是没有category分类的，如果没有创建就之间点分类，会出现 “Cannot GET /categories/”的错误，下面我们来创建分类页面。</p><h4 id="创建categories页面"><a href="#创建categories页面" class="headerlink" title="创建categories页面"></a>创建categories页面</h4><ol><li><p>打开命令行输入一下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure></li><li><p>指令输完之后会在source下生成一个categories目录，该目录下会有一个index.md文件，编辑该文件,type: categories</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2020-02-07 19:01:54</span><br><span class="line">type: categories</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ol><h4 id="为自己的文章添加各自的分类"><a href="#为自己的文章添加各自的分类" class="headerlink" title="为自己的文章添加各自的分类"></a>为自己的文章添加各自的分类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">categories: xxx</span><br><span class="line">---</span><br></pre></td></tr></table></figure><h4 id="重启刷新一下"><a href="#重启刷新一下" class="headerlink" title="重启刷新一下"></a>重启刷新一下</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure><p>然后你就可以在分类页看到自己刚刚的分类了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo,nexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客主页只显示标题部分</title>
+      <link href="/2020/02/06/theme-next-home/"/>
+      <url>/2020/02/06/theme-next-home/</url>
+      
+        <content type="html"><![CDATA[<p>next的默认主题首页是显示文章的全部，这样在查看时候很不方便，可以把首页设置为只显示标题和简要。</p><h6 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h6><ul><li>进入hexo博客项目的themes/next目录</li><li>用文本编辑器打开_config.yml文件</li><li>搜索 auto_excerpt,将enable 改为true，默认为false</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">auto_excerpt:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    length:</span> <span class="number">100</span></span><br></pre></td></tr></table></figure><h6 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h6><pre><code>auto_excerpt的lenth属性是用来调整概览的长度的，可以根据自己情况调整。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo,nexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用next来做为博客主题</title>
+      <link href="/2018/02/21/theme-next-start/"/>
+      <url>/2018/02/21/theme-next-start/</url>
+      
+        <content type="html"><![CDATA[<p>当你部署完成Hexo博客之后，博客的默认主题是landspace，而事实上hexo支持各种各样的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">主题</a>。我们选择next主题作为我们博客的主题。本文参照的是<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT官方文档</a>。</p><h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下:<br>1 下载NexT主题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your-blog-dir</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p><p>2 启用NexT作为主题：<br>下载完成之后，打开你hexo目录下面的_config.yml文件，找到theme节点，将其改为next。<br><img src="/images/theme-next-start/p1.png" alt="p1"><br>3 验证主题生效：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p><p>在浏览器里输入localhost:4000,检查主题是否生效。<br><img src="/images/theme-next-start/p2.png" alt="p2"><br>现在，你已经成功安装并启用了 NexT 主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。</p><h2 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h2><h3 id="设置-Scheme"><a href="#设置-Scheme" class="headerlink" title="设置 Scheme"></a>设置 Scheme</h3><blockquote><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p><ul><li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li><li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li><li>Pisces - 双栏 Scheme，小家碧玉似的清新</li></ul></blockquote><blockquote><p>Scheme 的切换通过更改theme/next目录下的_config.yml文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</p></blockquote><h3 id="设置-Menu"><a href="#设置-Menu" class="headerlink" title="设置 Menu"></a>设置 Menu</h3><blockquote><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。<br>通过更改theme/next目录下的_config.yml文件，搜索 menu 关键字。你可以设置menu的相关属性，是否显示图标，是否显示某一菜单项等等。</p></blockquote><h3 id="设置-侧栏"><a href="#设置-侧栏" class="headerlink" title="设置 侧栏"></a>设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改theme/next目录下的_config.yml文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。<br>1 设置侧栏位置<br>修改sidebar的position值来修改侧栏显示的位置，支持 left 和 right 两个选项<br>2 设置侧栏时机<br>修改sidebar的display的值来修改侧栏显示的时机，支持 post ，always ，hide ，remove</p><ul><li>post - 默认行为，在文章页面（拥有目录列表）时显示</li><li>always - 在所有页面中都显示</li><li>hide - 在所有页面中都隐藏（可以手动展开）</li><li>remove - 完全移除</li></ul><h2 id="后语"><a href="#后语" class="headerlink" title="后语"></a>后语</h2><p>next的基本设置基本就这么多，还有其他更多的配置，以后再补齐。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo,nexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开博纪念</title>
+      <link href="/2018/02/19/firstblog/"/>
+      <url>/2018/02/19/firstblog/</url>
+      
+        <content type="html"><![CDATA[<p>&emsp;&emsp;2019.02.19。就在今天，Lazy羊的个人博客开通了<br>&emsp;&emsp;作为一个程序员，有一个自己的个人博客，其实非常有必要。然而当我意识到这一点的时候已经有点晚了，不知不觉我已经是一个从事编程工作5年的老鸟了，到现在为止做的技术其实不算少，然而都是做到哪里用哪里，用到哪里查哪里，做完哪里忘哪里。所以到今天为止觉得自己会的东西很多，但是有觉得自己会的东西很少。后悔当初没有刚入行的时候做博客。<br>&emsp;&emsp;古语有云朝闻夕死，从今天起会陆续更新博客，会先从工作相关的开始，从熟悉的开始补起，由于对markdown的使用还不是很熟悉，加上时间不固定，所以更新频率可能会很低。<br>&emsp;&emsp;总之，以后加油~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+Github pages 个人博客搭建</title>
+      <link href="/2018/02/19/initblog/"/>
+      <url>/2018/02/19/initblog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>要做个人博客，有很多在线博客站可以选择。如博客园，CSDN，简书都非常不错，我也经常看这些站的博客，然而对于一个技术人员来说，博客原始文件数据最好是自己管理，这样不会受各种在线博客站的限制，因此选择Hexo+Github pages是一个非常不错的选择</p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><blockquote><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用<a href="https://www.appinn.com/markdown/#blockquote" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官方文档中文版</a></p></blockquote><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul><li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a></li><li><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">nodejs，npm</a></li></ul><p>将git和node环境装好之后，打开终端terminal，分别输入下列指令,如果可以得到下图所示说明环境已经装好：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br></pre></td></tr></table></figure></p><p><img src="/images/initblog/p1.png" alt="1"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure></p><p><img src="/images/initblog/p2.png" alt="2"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p><p><img src="/images/initblog/p3.png" alt="3"></p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1 创建一个博客目录（如/User/Documents/Blog),在该目录下面输入npm install hexo -g，开始安装Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo -g</span><br></pre></td></tr></table></figure></p><p>2 输入hexo -v检查是否安装成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure></p><p><img src="/images/initblog/p4.png" alt="4"></p><h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><p>1 如果安装完成Hexo，看到上图说明hexo安装成功。输入hexo init 进行Hexo初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p><p>2 输入npm install 安装相关的组件，等待安装完成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p><p>3 输入hexo g,生成相关文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p><p>4 输入hexo s，启动本地渲染(如果启动失败，请检查本地4000端口是否被占用)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p><p><img src="/images/initblog/p5.png" alt="5"><br>5 打开浏览器，输入localhost:4000，你将看到：<br><img src="/images/initblog/p6.png" alt="6"><br>到此为止，Hexo已经全部安装配置完成</p><h2 id="创建GitHub-pages-页面"><a href="#创建GitHub-pages-页面" class="headerlink" title="创建GitHub pages 页面"></a>创建GitHub pages 页面</h2><p>注册登录自己的GitHub账号（此处不再赘述），创建一个repository，注意repository的名字为yourname.github.io。yourname必须是你github账户的名字，如果不一样可能会遇到各种问题。<br><img src="/images/initblog/p7.png" alt="7"><br>创建完成之后，点击repository的setting页面,在github pages栏有一个url。这个url就是你发布博客之后的url，如果你配置的没有问题的话，10分钟之后这个页面就可以访问了</p><h2 id="将Hexo与GitHub-pages页面关联起来"><a href="#将Hexo与GitHub-pages页面关联起来" class="headerlink" title="将Hexo与GitHub pages页面关联起来"></a>将Hexo与GitHub pages页面关联起来</h2><p>在本地博客目录下面找到_config.yml的文件(关于config文件的详细配置，将会另外讲解，此处不再赘述)，在文件末尾找到deploy项，修改其repo的属性<br><img src="/images/initblog/p8.png" alt="8"><br>修改完之后保存，在终端输入hexo d 发布<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p><p>然后在你的GitHub page页面就可以看到这个页面了。到此配置就全部完成了。</p><h2 id="后语"><a href="#后语" class="headerlink" title="后语"></a>后语</h2><p>当然你也可以选择将博客绑定在个人域名下面，这样看起来更加酷炫。回头我也会更新绑定个人域名的部分。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2018/02/18/hello-world/"/>
+      <url>/2018/02/18/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一个markdown文档</title>
+      <link href="/2018/02/18/hello-hexo/"/>
+      <url>/2018/02/18/hello-hexo/</url>
+      
+        <content type="html"><![CDATA[<ul><li>item 1<ul><li>item 1.1</li><li>item 1.2</li></ul></li><li>item 2<ul><li>item 2.1</li></ul></li></ul><p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的<br>空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> String USD = <span class="string">"USD"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> String CNY = <span class="string">"CNY"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> String SCALE = <span class="string">"day"</span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"hello world"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="这是-H1"><a href="#这是-H1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2><h6 id="这是-H6"><a href="#这是-H6" class="headerlink" title="这是 H6"></a>这是 H6</h6><p><em>single asterisks</em><br><strong>double asterisks</strong></p><p><a href="https://files.catbox.moe/b3gdck.png" target="_blank" rel="noopener">https://files.catbox.moe/b3gdck.png</a><br><img src="https://files.catbox.moe/b3gdck.png" alt="ac娘"><br><img src="/images/981C49502C0E8773665CE6ED3B5B4467.png" alt="ac娘"></p><p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a> inline link.<br><a href="http://www.baidu.com/" target="_blank" rel="noopener">This link</a> has no title attribute.<br>This is <a href="http://www.baidu.com" target="_blank" rel="noopener">an example</a> reference-style link.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
