@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Bootstrap</title>
+    <link>/zh-cn/</link>
+    <description>Recent content on Hugo Bootstrap</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2016-{year} Razon Yang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 21 Nov 2021 19:29:12 +0000</lastBuildDate><atom:link href="/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>推荐几个好用的Idea插件</title>
+      <link>/zh-cn/posts/idea-plugin/</link>
+      <pubDate>Sun, 21 Nov 2021 19:29:12 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/idea-plugin/</guid>
+      <description>IDE Eval Reset 新版的Idea通过激活码和破解补丁jetbrains-agent已经无法破解，新的破解方式都是使用IDE Eval Reset插件来实现，这个插</description>
+    </item>
+    
+    <item>
+      <title>为博客添加本地搜索</title>
+      <link>/zh-cn/posts/hexo-search/</link>
+      <pubDate>Mon, 10 Feb 2020 12:42:32 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/hexo-search/</guid>
+      <description>前言 当文章写的越来越多，查找就会有些费劲，需要一个本地搜索的功能，今天就来添加博客的本地搜索 安装插件hexo-generator-searc</description>
+    </item>
+    
+    <item>
+      <title>为博客添加标签</title>
+      <link>/zh-cn/posts/hexo-tags/</link>
+      <pubDate>Mon, 10 Feb 2020 12:07:10 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/hexo-tags/</guid>
+      <description>创建tag页面和分类页面是类似的，如果没有添加直接点会出现cannot find的错误，下面我们来创建标签页 创建tags页面 打开命令行输入一下</description>
+    </item>
+    
+    <item>
+      <title>idea的安装与破解</title>
+      <link>/zh-cn/posts/java-idea/</link>
+      <pubDate>Sat, 08 Feb 2020 17:53:12 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/java-idea/</guid>
+      <description>前言 idea是开发java很好用的IDE，过去使用时候都是百度随便一个破解码就能完成破解，但最近老是因为破解过期而失败，令人心情烦躁。于是去</description>
+    </item>
+    
+    <item>
+      <title>为博客添加分类</title>
+      <link>/zh-cn/posts/hexo-categories/</link>
+      <pubDate>Fri, 07 Feb 2020 19:11:10 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/hexo-categories/</guid>
+      <description>刚刚创建完的博客是没有category分类的，如果没有创建就之间点分类，会出现 “Cannot GET /categories/”的错误，下面我们来创</description>
+    </item>
+    
+    <item>
+      <title>博客主页只显示标题部分</title>
+      <link>/zh-cn/posts/theme-next-home/</link>
+      <pubDate>Thu, 06 Feb 2020 19:12:05 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/theme-next-home/</guid>
+      <description>next的默认主题首页是显示文章的全部，这样在查看时候很不方便，可以把首页设置为只显示标题和简要。 方法 进入hexo博客项目的themes/n</description>
+    </item>
+    
+    <item>
+      <title>使用next来做为博客主题</title>
+      <link>/zh-cn/posts/theme-next-start/</link>
+      <pubDate>Wed, 21 Feb 2018 17:03:05 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/theme-next-start/</guid>
+      <description>当你部署完成Hexo博客之后，博客的默认主题是landspace，而事实上hexo支持各种各样的主题 。我们选择next主题作为我们博客的主题</description>
+    </item>
+    
+    <item>
+      <title>开博纪念</title>
+      <link>/zh-cn/posts/firstblog/</link>
+      <pubDate>Mon, 19 Feb 2018 17:50:10 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/firstblog/</guid>
+      <description>2019.02.19。就在今天，Lazy羊的个人博客开通了 作为一个程序员，有一个自己的个人博客，其实非常有必要。然而当我意识到这一点的时候已</description>
+    </item>
+    
+    <item>
+      <title>Hexo&#43;Github pages 个人博客搭建</title>
+      <link>/zh-cn/posts/initblog/</link>
+      <pubDate>Mon, 19 Feb 2018 17:35:56 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/initblog/</guid>
+      <description>写在前面 要做个人博客，有很多在线博客站可以选择。如博客园，CSDN，简书都非常不错，我也经常看这些站的博客，然而对于一个技术人员来说，博客原</description>
+    </item>
+    
+    <item>
+      <title>我的第一个markdown文档</title>
+      <link>/zh-cn/posts/hello-hexo/</link>
+      <pubDate>Sun, 18 Feb 2018 15:13:43 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/hello-hexo/</guid>
+      <description>markdown使用 我展示的是一级标题 我展示的是二级标题 一级标题 二级标题 三级标题 四级标题 五级标题 六级标题 斜体文本 斜体文本 粗体文本 粗体文本 粗斜</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/zh-cn/posts/hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/posts/hello-world/</guid>
+      <description>Welcome to Hexo ! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub .
+Quick Start Create a new post 1$ hexo new &amp;#34;My New Post&amp;#34; More info: Writing Run server 1$ hexo server More info: Server Generate static files 1$ hexo generate More info: Generating Deploy to remote sites 1$ hexo deploy More info: Deployment </description>
+    </item>
+    
+  </channel>
+</rss>
